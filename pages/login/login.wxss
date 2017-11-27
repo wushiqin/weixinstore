@@ -1,0 +1,85 @@
+/* pages/login/login.wxss */
+page {
+  display: block;
+  min-height: 100%;
+  background-color: #eee;
+}
+.login-top{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 100rpx 0;
+}
+.login-topc image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 100rpx;
+}
+.login-top .fa{
+  padding: 0 2%;
+  font-size:60rpx;
+  color: #9f9f9f;
+}
+.login-topc1 image{
+  width: 240rpx;
+  height: 240rpx;
+  border-radius: 0;
+}
+.login-topc{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.section{
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  height: 38px;
+  position: relative;
+  width: 98%;
+  padding-left: 2%;
+}
+.section input{
+  height: 38px;
+  font-size: 14px;
+}
+.section::before{
+  content: "";
+  position: absolute;
+  width: 98%;
+  height: 1px;
+  background: #eee;
+  bottom: 0;
+}
+.login-btnarea button{
+  width: 80%;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  background:#4286f5;
+  margin-top: 20px;
+}
+.login-forget{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 96%;
+  color: #2586b1;
+  font-size: 14px;
+  text-decoration: underline;
+  padding-top: 6px;
+}
+.form-picker{
+  width: 30%;
+}
+.form-group{
+  width: 70%;
+}
+.login-modal view{
+  text-align: center
+  }
+.login-modal view:nth-child(1){
+ font-weight: bold;
+ color: #000;
+}

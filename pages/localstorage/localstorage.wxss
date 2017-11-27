@@ -1,0 +1,61 @@
+/* pages/localstorage/localstorage.wxss */
+
+.container{
+  width: 90%;
+  margin: 0 auto;
+}
+.sou_content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+
+.sou_content input {
+  font-size: 14px;
+  color: #ccc;
+  border: 1px solid #09c;
+  display: inline-block;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #aaa;
+  padding: 4px;
+  width: 70%;
+}
+.sou_content text{
+  width: 20%;
+  display: inline-block;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #aaa;
+  padding: 4px;
+  color: #fff;
+  background: #09c;
+  text-align: center;
+  font-size: 16px;
+}
+.sou_history{
+  margin-top: 6px;
+}
+.sou_history text{
+ font-size: 14px;
+ color: #aaa;
+ text-decoration: underline;
+}
+.sou_history view:nth-child(1){
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.sou_searchlist{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.search-list{
+  margin: 2% 0 0 2%;
+}
+.search-list view{
+  padding: 4px;
+  border-radius: 2px;
+  border:1px solid #09c;
+  color: #aaa;
+}

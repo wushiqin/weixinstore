@@ -1,0 +1,18 @@
+<!--pages/localstorage/localstorage.wxml-->
+<view class='container'>
+<view class='sou_content'>
+<input type="text" class="search-icon" placeholder="请输入要搜索的内容" bindinput="searchNameInput"/>
+<text bindtap="setSearchStorage">搜索</text>
+</view>
+<view class='sou_history'>
+  <view>
+    <text bindtap="seeHistory">历史搜索</text>
+    <text bindtap="deleteHistory">删除搜索历史</text>
+  </view>
+  <view class='sou_searchlist'>
+    <view class="search-list" wx:for="{{searchData}}" wx:key="item">
+      <view>{{item == null?'暂无数据':item}}</view>
+    </view>
+  </view>
+</view>
+</view>

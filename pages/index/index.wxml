@@ -1,0 +1,54 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfoview {{userinfoview ? 'userinfoview-show' : ''}}">
+    <text class="userinfo-nickname">{{userInfo.nickName}}，{{motto}}</text>
+  </view>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for-items="{{banner_list[0].banner}}">
+      <swiper-item>
+        <image src="{{item.pic_url}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='tujianproduct'>
+  <text class='tujian_1'>超级现金宝</text>
+  <text>万份收益（元）1.1189</text>
+  <text class='tujian_2'>4.2380%</text>
+  <text>七日年化（11-24）</text>
+  <view class='tujian_3'><text>随充随用</text><text>实时取现</text><text>安全保障</text></view>
+  </view>
+  <view class='floortitle'>
+    <view class='floortitlemoreicon'>| 精选产品</view>
+  </view>
+  <view class='jingproduct'>
+  <block>
+  <view class="jingproduct_1">
+  <view class='jing_1'><text>混</text><text>南方天天利B(003474)</text></view>
+  <view class='jing_2'>
+  <ul>
+  <li>●100元起购买B类基金</li>
+  <li>●100元起购买B类基金</li>
+  <li>●100元起购买B类基金</li>
+  <li>●100元起购买B类基金100元起购买B类基金100元起购买B类基金</li>
+  </ul>
+  <p><text>1.000</text><text>单位净值</text></p>
+  </view>
+  </view>
+  </block>
+  <block>
+  <view class="jingproduct_1">
+  <view class='jing_1'><text>混</text><text>南方天天利B(003474)</text></view>
+  <view class='jing_2'>
+  <ul>
+  <li>●100元起购买B类基金</li>
+  <li>●100元起购买B类基金</li>
+  <li>●100元起购买B类基金</li>
+  <li>●100元起购买B类基金</li>
+  </ul>
+  <p><text>1.000</text><text>单位净值</text></p>
+  </view>
+  </view>
+  </block>
+  </view>
+
+</view>

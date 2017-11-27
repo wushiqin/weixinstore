@@ -1,0 +1,75 @@
+<!--pages/register/register.wxml-->
+<view class="container">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="row">
+      <text>姓 名：</text>
+      <input class='rowtext_input' type="text" name="userName" placeholder="请输入用户名" required="required" />
+    </view>
+    <view class="row">
+      <text>密 码：</text>
+      <input class='rowtext_input' type="password" name="userPassword" placeholder="请输入密码" />
+    </view>
+    <view class="row">  
+            <text>年 龄：</text> 
+            <view class='row_slider'>  
+                <slider name="age" show-value min="10" value='10'></slider>  
+            </view>      
+        </view>
+    <view class="row">  
+            <text>地 区：</text> 
+            <view class='row_picker'>  
+                <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">  
+                    <view class="picker">  
+                        <input type="hidden" disabled="true" name="addr" value="{{array[index]}}"/>  
+                    </view>  
+                </picker>  
+            </view>       
+        </view>
+    <view class="row">
+      <text>显 示：</text>
+      <view>
+      <switch name="isshow"/>
+      </view>
+    </view>
+    <view class="row">
+      <text>兴 趣：</text>
+      <checkbox-group name="cb">
+        <label>
+          <checkbox value="A" />乒乓球</label>
+        <label>
+          <checkbox value="B" checked="false" />羽毛球</label>
+        <label>
+          <checkbox value="C" checked="{{checked}}" />排球</label>
+      </checkbox-group>
+    </view>
+    <view class="row">
+      <text>级 别：</text>
+      <radio-group name="r">
+        <label>
+          <radio value="a" />初级</label>
+        <label>
+          <radio value="b" />中级</label>
+        <label>
+          <radio value="c" />高级</label>
+      </radio-group>
+    </view>
+    <view class="row">
+      <button type="primary" plain  hover-class form-type="submit">立即注册</button>
+      <button formType="reset">清空</button> 
+    </view>
+  </form>
+  <!-- 黑框提示并消失 -->  
+    <toast hidden="{{toast1Hidden}}" bindchange="toast1Change">  
+        {{notice_str}}  
+    </toast>  
+    <!-- 确认框 及 提示框 -->  
+    <view class="page__bd">  
+        <modal title="确认" confirm-text="确定" cancel-text="取消" hidden="{{modalHidden}}" mask bindconfirm="confirm_one" bindcancel="cancel_one">  
+            确认提交么？  
+        </modal>  
+        <modal class="modal" hidden="{{modalHidden2}}" no-cancel bindconfirm="modalChange2" bindcancel="modalChange2">  
+            <view> 提示 </view>  
+            <view> 清空成功 </view>  
+        </modal>  
+    </view> 
+</view>

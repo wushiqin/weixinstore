@@ -1,0 +1,45 @@
+<!--pages/login/login.wxml-->
+<view class='container'>
+  <view class='login-top'>
+    <view class='login-topc'>
+      <image src='../../image/icon64_appwx_logo.png'></image>
+      <text>微信</text>
+    </view>
+    <icon class='fa fa-gg'></icon>
+    <view class='login-topc login-topc1'>
+      <image src='../../image/login1.png'></image>
+      <text>南方基金</text>
+    </view>
+  </view>
+  <view class='login-form'>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="section">
+        <view class='form-group'>
+          <input type="text" class="input-text" name="username" placeholder="请输入身份证/手机号" />
+        </view>
+        <view class='form-picker'>  
+                <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">  
+                    <view class="picker">  
+                        <input type="hidden" disabled="true" name="addr" value="{{array[index]}}"/>  
+                    </view>  
+                </picker>  
+            </view>
+      </view>
+      <view class="section">
+        <view class='form-group'>
+          <input type="text" class="input-text" name="password" placeholder="请输入密码" />
+        </view>
+      </view>
+      <view class='login-forget' bindtap='modalTap2'><text>忘记密码？</text></view>
+      <view class="login-btnarea">
+        <button formType="submit">立即登录</button>
+      </view>
+    </form>
+  </view>
+  <view class='login-modal'>
+  <modal class="modal" hidden="{{modalHidden2}}" no-cancel bindconfirm="modalChange2" bindcancel="modalChange2">  
+            <view> 提示 </view>  
+            <view> {{notice_str}}  </view>  
+        </modal>
+        </view>
+</view>
